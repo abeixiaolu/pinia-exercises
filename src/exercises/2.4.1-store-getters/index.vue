@@ -15,8 +15,8 @@ const dangoShop = useDangoShop()
   <DangoShopMessages241>
     <!-- You will only need to display new things here -->
     You are ordering {{ dangoShop.amount }} dango{{ dangoShop.amount > 1 ? 's' : '' }}. That would be a total of
-    <span class="line-through">¥{{ dangoShop.totalPrice }}</span>
-    <span class="font-bold" v-if="dangoShop.haveDiscount">¥{{ dangoShop.discountedPrice }}</span>
+    <span class="line-through" v-if="dangoShop.haveDiscount">¥{{ dangoShop.totalPrice }}</span>
+    <span class="font-bold">¥{{ dangoShop.discountedPrice }}</span>
     . You are saving ¥{{ dangoShop.savingMoney }} with our special offer.
   </DangoShopMessages241>
 
