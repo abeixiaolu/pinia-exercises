@@ -17,7 +17,7 @@ export const useDango = defineStore('2.5.1 store-actions', {
       this.eatenBalls++
       if (this.eatenBalls % 3 === 0) this.amount--
     },
-    startEating() {
+    async startEating() {
       if (this.isEating || this.amount < 1) return
       this.isEating = true
       return new Promise(resolve => {
